@@ -1,0 +1,11 @@
+#Jasmien
+Jasmien/Data/
+
+#Rstudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Jupyter Notebook
+.ipynb_checkpoints
