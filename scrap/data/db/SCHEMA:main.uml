@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>699a7c06-5349-4b31-afd6-bb8b043d7b9d.SCHEMA:main</OriginalElement>
+  <nodes>
+    <node x="-9.0" y="-11.0">699a7c06-5349-4b31-afd6-bb8b043d7b9d.TABLE:main.articles</node>
+    <node x="281.0" y="-10.0">699a7c06-5349-4b31-afd6-bb8b043d7b9d.TABLE:main.sqlite_master</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="200.0" y="146.5" />
+  <SelectedNodes>
+    <node>699a7c06-5349-4b31-afd6-bb8b043d7b9d.TABLE:main.articles</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

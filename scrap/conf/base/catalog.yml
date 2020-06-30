@@ -1,0 +1,68 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in the kedro docs under `Accessing data`
+# You can access the kedro docs by running `kedro docs`
+
+raw_elsevier:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/elsevier/raw_elsevier_articles.csv
+  versioned: true
+
+raw_ema:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/ema/raw_ema_articles.csv
+  versioned: true
+
+raw_lancet:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/lancet/raw_lancet_articles.csv
+  versioned: true
+
+raw_nejm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/nejm/raw_nejm_articles.csv
+  versioned: true
+
+raw_pubmed:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/pubmed/raw_pubmed_articles.csv
+  versioned: true
+
+raw_nature:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/nature/raw_nature_articles.csv
+  versioned: true
+
+raw_uptodate:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/uptodate/raw_uptodate_articles.csv
+  versioned: true
+
+raw_acp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/acp/raw_acp_articles.csv
+  versioned: true
+
+int_articles:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/articles/int_articles.csv
+  versioned: true
+
+prm_articles:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/articles/prm_articles.csv
+  versioned: true
+
+db_articles_in:
+  type: SQLTableDataSet
+  table_name: articles
+  credentials:
+    con: sqlite:///data/db/articles.db
+
+db_articles_out:
+  type: SQLTableDataSet
+  table_name: articles
+  credentials:
+    con: sqlite:///data/db/articles.db
+  save_args:
+    if_exists: replace

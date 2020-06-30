@@ -1,0 +1,128 @@
+2020-04-29 18:48:07,466 - kedro.pipeline.node - ERROR - Node `scrap_nejm(None) -> [raw_nejm_articles]` failed with error: 
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2020-04-29 18:52:03,273 - kedro.pipeline.node - ERROR - Node `scrap_pubmed(None) -> [raw_pubmed_articles]` failed with error: 
+name 'get_abstract' is not defined
+2020-04-30 12:50:45,364 - kedro.pipeline.node - ERROR - Node `scrap_elsevier(None) -> [raw_elsevier_articles]` failed with error: 
+Expecting value: line 1 column 1 (char 0)
+2020-04-30 12:58:30,964 - kedro.pipeline.node - ERROR - Node `lemma_lancet([raw_lancet_articles]) -> [int_ema_articles]` failed with error: 
+("\n**********************************************************************\n  Resource \x1b[93mstopwords\x1b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \x1b[31m>>> import nltk\n  >>> nltk.download('stopwords')\n  \x1b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \x1b[93mcorpora/stopwords\x1b[0m\n\n  Searched in:\n    - '/Users/leonel/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/share/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n", 'occurred at index 0')
+2020-04-30 13:13:35,585 - kedro.pipeline.node - ERROR - Node `lemma_lancet([raw_lancet_articles]) -> [int_ema_articles]` failed with error: 
+("\n**********************************************************************\n  Resource \x1b[93mwordnet\x1b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \x1b[31m>>> import nltk\n  >>> nltk.download('wordnet')\n  \x1b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \x1b[93mcorpora/wordnet\x1b[0m\n\n  Searched in:\n    - '/Users/leonel/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/share/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n", 'occurred at index 0')
+2020-04-30 13:20:10,628 - kedro.pipeline.node - ERROR - Node `lemma_lancet([raw_lancet_articles]) -> [int_ema_articles]` failed with error: 
+("\n**********************************************************************\n  Resource \x1b[93mwordnet\x1b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \x1b[31m>>> import nltk\n  >>> nltk.download('wordnet')\n  \x1b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \x1b[93mcorpora/wordnet\x1b[0m\n\n  Searched in:\n    - '/Users/leonel/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/share/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n", 'occurred at index 0')
+2020-04-30 13:28:22,729 - kedro.pipeline.node - ERROR - Node `lemma_lancet([raw_lancet_articles]) -> [int_ema_articles]` failed with error: 
+("'float' object has no attribute 'split'", 'occurred at index 23')
+2020-04-30 13:29:29,386 - kedro.pipeline.node - ERROR - Node `lemma_lancet([raw_lancet_articles]) -> [int_ema_articles]` failed with error: 
+("'float' object has no attribute 'split'", 'occurred at index 23')
+2020-04-30 17:21:40,782 - kedro.pipeline.node - ERROR - Node `lemma_uptodate([raw_uptodate]) -> [int_uptodate]` failed with error: 
+("'Series' object has no attribute 'Abstract'", 'occurred at index 0')
+2020-05-01 15:35:07,570 - kedro.pipeline.node - ERROR - Node `lemma_uptodate: lemma_uptodate([raw_uptodate]) -> [int_uptodate]` failed with error: 
+("\n**********************************************************************\n  Resource \x1b[93mpunkt\x1b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \x1b[31m>>> import nltk\n  >>> nltk.download('punkt')\n  \x1b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \x1b[93mtokenizers/punkt/PY3/english.pickle\x1b[0m\n\n  Searched in:\n    - '/Users/leonel/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/share/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n    - ''\n**********************************************************************\n", 'occurred at index 0')
+2020-05-02 16:35:16,652 - kedro.pipeline.node - ERROR - Node `scrap_uptodate: scrap_uptodate(None) -> [raw_uptodate]` failed with error: 
+'version'
+2020-05-02 16:42:34,668 - kedro.pipeline.node - ERROR - Node `scrap_uptodate: scrap_uptodate(None) -> [raw_uptodate]` failed with error: 
+6 columns passed, passed data had 7 columns
+2020-05-02 16:45:06,038 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+"['ID'] not in index"
+2020-05-02 16:51:47,067 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+"['PublishedDate'] not in index"
+2020-05-02 16:57:55,007 - kedro.pipeline.node - ERROR - Node `scrap_uptodate: scrap_uptodate(None) -> [raw_uptodate]` failed with error: 
+'lastMajorUpdateMs'
+2020-05-02 17:02:29,326 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+must be str, not float
+2020-05-02 17:08:39,251 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+must be str, not float
+2020-05-02 17:09:07,824 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+("argument of type 'LazyCorpusLoader' is not iterable", 'occurred at index 0')
+2020-05-02 17:09:31,375 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+("argument of type 'LazyCorpusLoader' is not iterable", 'occurred at index 0')
+2020-05-02 17:09:46,961 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+("argument of type 'LazyCorpusLoader' is not iterable", 'occurred at index 0')
+2020-05-02 17:10:25,065 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+must be str, not float
+2020-05-02 17:17:16,872 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+'ColumnID'
+2020-05-02 17:20:08,720 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+("argument of type 'LazyCorpusLoader' is not iterable", 'occurred at index 0')
+2020-05-02 17:53:46,137 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+must be str, not float
+2020-05-02 18:47:52,476 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+Out of bounds nanosecond timestamp: 1-04-30 00:00:00
+2020-05-02 18:51:01,386 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+Out of bounds nanosecond timestamp: 1-04-30 00:00:00
+2020-05-02 19:13:56,849 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+replace() got an unexpected keyword argument 'year'
+2020-05-02 19:20:10,960 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+must be str, not int
+2020-05-04 11:24:11,077 - kedro.pipeline.node - ERROR - Node `scrap_uptodate: scrap_uptodate(None) -> [raw_uptodate]` failed with error: 
+int() argument must be a string, a bytes-like object or a number, not 'dict'
+2020-05-04 11:43:01,429 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+'PublishedDate'
+2020-05-04 13:23:46,295 - kedro.pipeline.node - ERROR - Node `scrap_lancet: scrap_lancet(None) -> [raw_lancet]` failed with error: 
+10 columns passed, passed data had 11 columns
+2020-05-04 13:32:34,243 - kedro.pipeline.node - ERROR - Node `scrap_nejm: scrap_nejm(None) -> [raw_nejm]` failed with error: 
+'NoneType' object is not subscriptable
+2020-05-05 21:25:32,680 - kedro.pipeline.node - ERROR - Node `scrap_elsevier: scrap_elsevier(None) -> [raw_elsevier]` failed with error: 
+'NoneType' object has no attribute 'replace'
+2020-05-05 21:34:10,696 - kedro.pipeline.node - ERROR - Node `scrap_nejm: scrap_nejm(None) -> [raw_nejm]` failed with error: 
+'NoneType' object has no attribute 'get_text'
+2020-05-05 21:38:22,832 - kedro.pipeline.node - ERROR - Node `scrap_elsevier: scrap_elsevier(None) -> [raw_elsevier]` failed with error: 
+'NoneType' object has no attribute 'replace'
+2020-05-07 13:15:54,500 - kedro.pipeline.node - ERROR - Node `db_articles_all: drop_duplicates([prm_articles]) -> [db_articles_all]` failed with error: 
+'DataFrame' object has no attribute 'sort'
+2020-05-07 15:16:36,670 - kedro.pipeline.node - ERROR - Node `add_features: add_features([db_articles_out,params:keywords]) -> [db_articles_features]` failed with error: 
+('Iterable over raw text documents expected, string object received.', 'occurred at index 0')
+2020-05-07 15:22:34,396 - kedro.pipeline.node - ERROR - Node `add_features: add_features([db_articles_out,params:keywords]) -> [db_articles_features]` failed with error: 
+("'str' object has no attribute 'tolist'", 'occurred at index 0')
+2020-05-07 15:23:59,045 - kedro.pipeline.node - ERROR - Node `add_features: add_features([db_articles_out,params:keywords]) -> [db_articles_features]` failed with error: 
+("Duplicate term in vocabulary: 'olumiant'", 'occurred at index 0')
+2020-05-07 15:24:18,854 - kedro.pipeline.node - ERROR - Node `add_features: add_features([db_articles_out,params:keywords]) -> [db_articles_features]` failed with error: 
+("Duplicate term in vocabulary: 'axial'", 'occurred at index 0')
+2020-05-07 16:11:20,392 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles]) -> [prm_articles]` failed with error: 
+'Series' objects are mutable, thus they cannot be hashed
+2020-05-07 16:14:50,879 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles]) -> [prm_articles]` failed with error: 
+unhashable type: 'list'
+2020-05-08 09:55:54,324 - kedro.pipeline.node - ERROR - Node `scrap_lancet: scrap_lancet(None) -> [raw_lancet]` failed with error: 
+'NoneType' object has no attribute 'get_text'
+2020-05-08 10:44:40,490 - kedro.pipeline.node - ERROR - Node `temporal: temporal([db_articles_in,params:keywords]) -> [prm_articles]` failed with error: 
+Cannot set a frame with no defined index and a value that cannot be converted to a Series
+2020-05-08 10:50:52,154 - kedro.pipeline.node - ERROR - Node `drop_duplicates: drop_duplicates([db_articles_in,prm_articles]) -> [db_articles_out]` failed with error: 
+("name 'keywords' is not defined", 'occurred at index 0')
+2020-05-08 10:53:44,648 - kedro.pipeline.node - ERROR - Node `drop_duplicates: drop_duplicates([db_articles_in,params:keywords,prm_articles]) -> [db_articles_out]` failed with error: 
+("'str' object has no attribute 'values'", 'occurred at index 0')
+2020-05-08 11:08:03,428 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([ftr_articles,params:keywords]) -> [prm_articles]` failed with error: 
+("'Series' object has no attribute 'Title'", 'occurred at index 0')
+2020-05-08 11:09:24,708 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([ftr_articles,params:keywords]) -> [prm_articles]` failed with error: 
+"['Title' 'Abstract'] not found in axis"
+2020-05-11 11:08:00,302 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stopwords]) -> [prm_articles]` failed with error: 
+("get_words() missing 1 required positional argument: 'lemmas'", 'occurred at index 0')
+2020-05-11 11:09:53,632 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("argument of type 'NoneType' is not iterable", 'occurred at index 0')
+2020-05-11 11:15:49,778 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("argument of type 'NoneType' is not iterable", 'occurred at index 0')
+2020-05-11 11:26:55,522 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("argument of type 'NoneType' is not iterable", 'occurred at index 0')
+2020-05-11 11:28:15,970 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("argument of type 'NoneType' is not iterable", 'occurred at index 0')
+2020-05-11 11:30:03,052 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("argument of type 'NoneType' is not iterable", 'occurred at index 0')
+2020-05-11 19:39:56,031 - kedro.pipeline.node - ERROR - Node `lemmatize: lemmatize([int_articles,params:keywords,params:stems,params:stopwords]) -> [prm_articles]` failed with error: 
+("\n**********************************************************************\n  Resource \x1b[93mvader_lexicon\x1b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \x1b[31m>>> import nltk\n  >>> nltk.download('vader_lexicon')\n  \x1b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \x1b[93msentiment/vader_lexicon.zip/vader_lexicon/vader_lexicon.txt\x1b[0m\n\n  Searched in:\n    - '/Users/leonel/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/share/nltk_data'\n    - '/Users/leonel/opt/anaconda3/envs/scrap/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n    - ''\n**********************************************************************\n", 'occurred at index 0')
+2020-05-12 12:43:38,255 - kedro.pipeline.node - ERROR - Node `scrap_nature: scrap_nature(None) -> [raw_nature]` failed with error: 
+'NoneType' object has no attribute 'get_text'
+2020-05-12 12:51:01,198 - kedro.pipeline.node - ERROR - Node `scrap_nature: scrap_nature(None) -> [raw_nature]` failed with error: 
+'NoneType' object has no attribute 'replace'
+2020-05-12 12:55:38,789 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nature,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2020-05-12 13:04:03,175 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nature,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+cannot compare a dtyped [datetime64[ns]] array with a scalar of type [bool]
+2020-05-12 13:11:44,038 - kedro.pipeline.node - ERROR - Node `join: join_articles([raw_elsevier,raw_ema,raw_lancet,raw_nature,raw_nejm,raw_pubmed,raw_uptodate]) -> [int_articles]` failed with error: 
+"['ID'] not in index"
+2020-05-15 09:39:00,805 - kedro.pipeline.node - ERROR - Node `scrap_pubmed: scrap_pubmed(None) -> [raw_pubmed]` failed with error: 
+'doi'
+2020-05-15 09:44:27,842 - kedro.pipeline.node - ERROR - Node `scrap_pubmed: scrap_pubmed(None) -> [raw_pubmed]` failed with error: 
+must be str, not NoneType
+2020-05-15 09:52:07,365 - kedro.pipeline.node - ERROR - Node `scrap_pubmed: scrap_pubmed(None) -> [raw_pubmed]` failed with error: 
+must be str, not int
+2020-05-25 11:04:09,032 - kedro.pipeline.node - ERROR - Node `scrap_pubmed: scrap_pubmed(None) -> [raw_pubmed]` failed with error: 
+'authors'

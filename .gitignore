@@ -1,6 +1,3 @@
-#Jasmien
-Jasmien/Data/
-
 #Rstudio
 .Rproj.user
 .Rhistory
@@ -9,3 +6,7 @@ Jasmien/Data/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.pyc
+
+# Mac
+**/.DS_Store

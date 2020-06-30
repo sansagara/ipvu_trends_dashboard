@@ -1,0 +1,21 @@
+{"type": "ContextJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "project_path": "/Users/leonel/Proyectos/ipvu-scrapper", "env": "local", "kedro_version": "0.15.9", "tags": [], "from_nodes": [], "to_nodes": [], "node_names": [], "from_inputs": [], "load_versions": {}, "pipeline_name": null, "extra_params": {}, "git_sha": "492ec5e"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_lancet", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_acp", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_elsevier", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_uptodate", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_nejm", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_ema", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_nature", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_pubmed", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_elsevier", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_ema", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_lancet", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_nejm", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_pubmed", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_uptodate", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_nature", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "raw_acp", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "int_articles", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "int_articles", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "prm_articles", "operation": "save", "version": "2020-05-25T18.37.51.354Z"}
+{"type": "DatasetJournalRecord", "run_id": "2020-05-25T18.37.51.354Z", "name": "prm_articles", "operation": "load", "version": "2020-05-25T18.37.51.354Z"}

@@ -1,0 +1,155 @@
+keywords:
+  - brodalumab
+  - ixekizumab
+  - secukinumab
+  - ustekinumab
+  - guselkumab
+  - risankizumab
+  - tildrakizumab
+  - brivaracetam
+  - romosozumab
+  - tocilizumab
+  - tofacitinib
+  - rituximab
+  - golimumab
+  - baracitinibs
+  - adalimumab
+  - apremilast
+  - etanercept
+  - upadacitinib
+  - abatacept
+  - infliximab
+  - certolizumab
+  - methotrexate
+  - mofetil
+  - azathioprine
+  - cyclophosphamide
+  - chloroquine
+  - tacrolimus
+  - ciclosporin
+  - global health emergency
+  - hydroxychloroquine
+  - leflunomide
+  - infection
+  - sulfasalazine
+  - sars-cov-2
+  - vitro
+  - safety
+  - psoriasis
+  - arthritis
+  - spondylitis
+  - crohn
+  - il-inhibitor
+  - anti-tnf
+  - jak
+  - bdmards
+
+stopwords:
+  - from
+  - subject
+  - re
+  - edu
+  - use
+  - not
+  - would
+  - say
+  - could
+  - be
+  - know
+  - good
+  - go
+  - get
+  - do
+  - done
+  - try
+  - many
+  - some
+  - nice
+  - thank
+  - think
+  - see
+  - rather
+  - easy
+  - easily
+  - lot
+  - lack
+  - make
+  - want
+  - seem
+  - run
+  - need
+  - even
+  - right
+  - line
+  - even
+  - also
+  - may
+  - take
+  - come
+  - abstract
+  - structured
+  - introduction
+  - google
+  - scholar
+  - pubmed
+  - et
+  - might
+  - vs
+
+stems:
+  kyntheum: brodalumab
+  taltz: ixekizumab
+  consentyx: secukinumab
+  cosentyx: secukinumab
+  stelara: ustekinumab
+  tremfya: guselkumab
+  skyrizi: risankizumab
+  ilumetri: tildrakizumab
+  roactemra: tocilizumab
+  xeljanz: tofacitinib
+  mabthera: rituximab
+  mabtera: rituximab
+  olimumab: golimumab
+  simponi: golimumab
+  baricitinib: baracitinib
+  olumiant: baracitinib
+  umira: adalimumab
+  humira: adalimumab
+  briviact: brivaracetam
+  evenity: romosozumab
+  osteoporosis: romosozumab
+  postmenopausal: romosozumab
+  otezla: apremilast
+  enbrel: etanercept
+  embrel: etanercept
+  rinvoq: upadacitinib
+  orencia: abatacept
+  horencia: abatacept
+  remicade: infliximab
+  cimzia: certolizumab
+  pegol: certolizumab
+  tnf: certolizumab
+  mycophenolate: mofetil
+  chloroquine: hydroxychloroquine
+  cloroquine: hydroxychloroquine
+  rheumatoid arthritis: arthritis
+  ankylosing spondyloarthritis: arthritis
+  axial spondyloarthritis: arthritis
+  spondyloarthritis: arthritis
+  rheumatoid: arthritis
+  ankylosing: arthritis
+  axial: arthritis
+  il 17: il-inhibitor
+  il 17as: il-inhibitor
+  il 23: il-inhibitor
+  il 1: il-inhibitor
+  il 6: il-inhibitor
+  il inhibitor: il-inhibitor
+  il-17: il-inhibitor
+  il-17as: il-inhibitor
+  il-23: il-inhibitor
+  il-1: il-inhibitor
+  il-6: il-inhibitor
+  jaks: jak
+  jak inhibitor: jak
+  jaks inhibitor: jak
