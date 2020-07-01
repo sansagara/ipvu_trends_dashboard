@@ -4,6 +4,7 @@
 
 Te first part of the project is an ETL/Scrap pipeline built using [Kedro](https://github.com/quantumblacklabs/kedro)
 It scraps covid-19 related Scientifica papers and publications from different EMEA and worldwide sources/Journals, like:
+
 - Lancet
 - EMA
 - ELSEVIER
@@ -32,8 +33,11 @@ kedro run
 ```
 
 ### Demo dataset
-TO get an idea of the structure of the dataset that's created on the pipeline, you can look at:
+To get an idea of the structure of the dataset that's created on the pipeline, you can look at:
+[Primary Dataset](https://raw.githubusercontent.com/sansagara/ipvu_trends_dashboard/master/scrap/data/03_primary/articles/prm_articles.csv/2020-05-25T18.37.51.354Z/prm_articles.csv)
 
+The SQLite DB that's used on the Flask visualizer is here:
+[articles.db](https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/data/db/articles.db)
 
 ### Scrap code
 Scrap details can be seen on the scrap nodes here:
@@ -65,6 +69,6 @@ Run `python visualize/myapp.py` in the terminal.
 ### Video Demo
 [Video Walkthrough](https://youtu.be/VzAYcjGuKsE)
 
-## Deployed App
+### Deployed App
 The flask application portion is deployed on Heroku for easy demoing purposes:
 [App on Heroku](https://ipvu-dashboard.herokuapp.com/)
