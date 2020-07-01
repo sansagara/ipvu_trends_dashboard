@@ -1,48 +1,52 @@
 # COVID-19 Journals scraper and NLP Pipeline
 
-## Overview
+## Scrap and NLP Pipeline
 
-This is your new Kedro project, which was generated using `Kedro 0.15.9` by running:
+Te first part of the project is an ETL/Scrap pipeline built using [Kedro](https://github.com/quantumblacklabs/kedro)
+It scraps covid-19 related Scientifica papers and publications from different EMEA and worldwide sources/Journals, like:
+- Lancet
+- EMA
+- ELSEVIER
+- NEJM
+- UPTODATE
+- NATURE
+- PUBMED
 
-```
-kedro new
-```
+The pipeline has different nodes that:
+1. Scraps websites using Beautifulsoup or API calls.
+2. Creates Pandas Dataframes with article details.
+3. Runs several NLP processes (Tokenization, Lemmatization, Sentiment, etc) 
+4. Stores results in a SQLite DB to be used by the flask app on the dashboard website.
 
-Take a look at the [documentation](https://kedro.readthedocs.io) to get started.
-
-## Rules and guidelines
-
-In order to get the best out of the template:
- * Please don't remove any lines from the `.gitignore` file provided
- * Make sure your results can be reproduced by following a data engineering convention, e.g. the one we suggest [here](https://kedro.readthedocs.io/en/stable/06_resources/01_faq.html#what-is-data-engineering-convention)
- * Don't commit any data to your repository
- * Don't commit any credentials or local configuration to your repository
- * Keep all credentials or local configuration in `conf/local/`
-
-## Installing dependencies
-
-Dependencies should be declared in `src/requirements.txt` for pip installation and `src/environment.yml` for conda installation.
-
+### Prerequisites
+Dependencies are declared in `src/requirements.txt` for pip installation and `src/environment.yml` for conda installation.
 To install them, run:
-
 ```
 kedro install
 ```
 
-## Running Kedro
-
-You can run your Kedro project with:
-
+### Running Kedro
+You can run the Kedro project (Pipeline) with:
 ```
 kedro run
 ```
 
- 
-# COVID-19 Visualizer
-This is a flask app that visualizes data from a sqlite DB file.
+### Demo dataset
+TO get an idea of the structure of the dataset that's created on the pipeline, you can look at:
 
-### Getting Started
-This flask app can be used as a template for visualizing your own data. 
+
+### Scrap code
+Scrap details can be seen on the scrap nodes here:
+https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/scrap/nodes.py
+
+## NLP Process code
+NLP processing can be seen on the process nodes here:
+https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/process/nodes.py
+
+
+## Flask Dashboard Application
+This is a Flask application that displays a dashboard (Like the one on the Flask lesson)
+It shows several charts and tables with different information like keyword frequency, sentiment, etc.
 
 ### Prerequisites
 To install the flask app, you need:
@@ -50,10 +54,17 @@ To install the flask app, you need:
 - python3
 - python packages in the requirements.txt file
 
-### Install the packages with
- pip install -r requirements.txt
+Install the packages with
+ `pip install -r requirements.txt`
 
-### Installing
+### Running Flask
 On a MacOS/linux system, installation is easy. 
 Open a terminal, and go into the directory with the flask app files. 
-Run `python myapp.py` in the terminal.
+Run `python visualize/myapp.py` in the terminal.
+
+### Video Demo
+[Video Walkthrough](https://youtu.be/VzAYcjGuKsE)
+
+## Deployed App
+The flask application portion is deployed on Heroku for easy demoing purposes:
+[App on Heroku](https://ipvu-dashboard.herokuapp.com/)

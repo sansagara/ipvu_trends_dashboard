@@ -3,7 +3,7 @@ def query_sqlite(query: str, params: dict = None, one: bool = False) -> any:
     print(params)
     print()
     import sqlite3
-    conn = sqlite3.connect("data/articles.db",
+    conn = sqlite3.connect("visualize/data/articles.db",
                            detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     cur = conn.cursor()
     if params:
@@ -47,7 +47,7 @@ def return_articles_per_source():
                        "FROM articles "
                        "GROUP BY Source "
                        "ORDER BY Source asc ",
-                       "sqlite:///data/articles.db")
+                       "sqlite:///visualize/data/articles.db")
 
 
 def return_keywords():
@@ -55,7 +55,7 @@ def return_keywords():
     return pd.read_sql("SELECT ID, PublishedDate, abstract_kw "
                        "FROM articles "
                        "ORDER BY ScrapDate DESC ",
-                       "sqlite:///data/articles.db")
+                       "sqlite:///visualize/data/articles.db")
 
 
 def return_article_details(article_id):
@@ -66,14 +66,14 @@ def return_article_details(article_id):
         ORDER BY ScrapDate DESC
         LIMIT 1'''
     return pd.read_sql(str(query).format(article_id),
-                       "sqlite:///data/articles.db")
+                       "sqlite:///visualize/data/articles.db")
 
 
 def return_article_sentiments():
     import pandas as pd
     return pd.read_sql("SELECT abstract_sentiment as Sentiment "
                        "FROM articles ",
-                       "sqlite:///data/articles.db")
+                       "sqlite:///visualize/data/articles.db")
 
 
 def articles_count():
