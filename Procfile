@@ -1,1 +1,1 @@
-web: gunicorn visualize/myapp:app
+web: gunicorn --pythonpath visualize myapp:app

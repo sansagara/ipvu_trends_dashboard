@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb98e08-9195-469d-9de9-92a944775485" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/data/articles.db" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/data/articles.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/data/wrangle_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/myapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/myapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/myapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/myapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/myapp/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/myapp/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/myapp/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/myapp/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/myapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/visualize/myapp/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+              <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -270,7 +262,7 @@
       <workItem from="1593550139549" duration="29000" />
       <workItem from="1593550510842" duration="662000" />
       <workItem from="1593589669011" duration="40000" />
-      <workItem from="1593619072916" duration="676000" />
+      <workItem from="1593619072916" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <created>1589293855059</created>
@@ -283,7 +275,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8744000" />
+    <option name="totallyTimeSpent" value="8946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1811" y="-157" width="1440" height="820" extended-state="0" />
@@ -419,7 +411,7 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+          <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
         </state>
       </provider>
     </entry>
