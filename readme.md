@@ -1,6 +1,6 @@
 # COVID-19 Journals scraper and NLP Pipeline
 
-## Scrap and NLP Pipeline
+## 1 - Scrap and NLP Pipeline
 
 Te first part of the project is an ETL/Scrap pipeline built using [Kedro](https://github.com/quantumblacklabs/kedro)
 It scraps covid-19 related Scientifica papers and publications from different EMEA and worldwide sources/Journals, like:
@@ -43,12 +43,12 @@ The SQLite DB that's used on the Flask visualizer is here:
 Scrap details can be seen on the scrap nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/scrap/nodes.py
 
-## NLP Process code
+### NLP Process code
 NLP processing can be seen on the process nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/process/nodes.py
 
 
-## Flask Dashboard Application
+## 2 - Flask Dashboard Application
 This is a Flask application that displays a dashboard (Like the one on the Flask lesson)
 It shows several charts and tables with different information like keyword frequency, sentiment, etc.
 
