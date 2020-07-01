@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IPVU Trends</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/static/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .card {
+            overflow: hidden;
+        }
+        .card-body .rotate {
+            z-index: 8;
+            float: right;
+            height: 100%;
+        }
+        .card-body .rotate i {
+            color: rgba(20, 20, 20, 0.15);
+            position: absolute;
+            left: auto;
+            right: -10px;
+            top: auto;
+            bottom: 0;
+            display: block;
+            font-size: 4em;
+            z-index: 8;
+            transform: rotate(-44deg);
+        }
+
+    </style>
+</head>
+
+<body>
+<!--navbar links-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/index">
+        <img src="/static/img/favicon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
+         IPVU Trends
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="{{ 'active' if active_page == 'articles' else '' }} nav-link" href="/articles">
+                    <span class="oi oi-document"></span> Articles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="{{ 'active' if active_page == 'index' else '' }} nav-link" href="/index">
+                    <span class="oi oi-dashboard"></span> Dashboard
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+<footer>
+    {% block footer %}
+    {% endblock %}
+</footer>
+</html>

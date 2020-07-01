@@ -1,56 +1,103 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% set active_page = "articles" %}
 
-<html>
+{% block content %}
+    <div class="container-fluid mt-3 text-center">
+        <!--form column-->
+        <div class="col-10 mx-auto my-4">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-3">
+                                <select id="source" name="source" class="form-control">
+                                    <option value="" selected>All Sources...</option>
+                                    {% for source in sources %}
+                                        {% if args.get('source') == source[0] %}
+                                            <option selected>{{ source[0] }}</option>
+                                        {% else %}
+                                            <option>{{ source[0] }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" id="keywords" name="keywords" class="form-control" placeholder="Keywords (comma separated)"  value="{{ args['keywords'] }}">
+                            </div>
+                            <div class="col-2">
+                                <input type="date" name="date" max="3000-12-31" value="{{ args['date'] }}"
+                                       min="1000-01-01" class="form-control">
+                            </div>
+                            <div class="col-2">
+                                    <input type="date" name="bday" min="1000-01-01"
+                                           max="3000-12-31" class="form-control">
+                            </div>
+                            <div class="col-1 mx-auto">
+                                <button type="submit" class="btn btn-primary mx-auto">Go</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-<head>
+        <!--table column-->
+        <div class="col-11 mx-auto ">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        {% for column in columns %}
+                            <th>{{column}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% for article in articles %}
+                    <tr>
+                        <td>
+                        {% if article[1] %}
+                            <a href="https://www.doi.org/{{article[1]}}">{{article[0]}}</a>
+                        {% else %}
+                            {% if article[3] == "UPTODATE" %}
+                                <a href="https://www.uptodate.com/home/covid-19-access">{{article[0]}}</a>
+                            {% elif article[3] == "EMA" %}
+                                <a href="https://ema.europa.eu/{{article[0].replace('URL:', '')}}">{{article[0]}}</a>
+                            {% endif %}
+                        {% endif %}
+                            <br>
+                            <a href="./articles/{{article[0]}}" title="See article details" class="text-warning">
+                                <span class="oi oi-dashboard" title="See article analysis" aria-hidden="true"
+                                      data-toggle="tooltip" data-placement="bottom" style="font-size: 1.5em"></span>
+                            </a>
+                        </td>
+                        <td>{{article[2] | capitalize}}</td>
+                        <td>
+                            <div class="badge badge-primary">{{article[3]}}</div>
+                            <br>
+                            <p class="text-muted font-weight-light small">{{article[4].split()[0]}}</p>
+                        </td>
+                        <td>{{article[5]}}</td>
+                        <td>
+                            {% for kw, cnt in (article[7] | evaluate).items() %}
+                                <a href="?keywords={{ kw }}" class="badge badge-light">{{ kw }}: {{ cnt }}</a>
+                            {% endfor %}
+                        </td>
+                    <td><span class="badge badge-secondary" data-toggle="tooltip" data-placement="top" data-html="true"
+                              title="Sum of keywords: <b>{{article[8]}}</b><br>Total words: <b>{{article[6]}}</b>">{{article[8]}} / {{article[6]}}</span>
 
-<title>My Data Dashboard</title>
-
-<!--import script files needed from plotly and bootstrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-</head>
-
-<body>
-
-<!--navbar links-->     
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-   <a class="navbar-brand" href="#">Data Dashboard</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" 
-  data-target="#navbarTogglerDemo02" 
-  aria-controls="navbarTogglerDemo02" aria-expanded="false" 
-  aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-            <a class="nav-link" href="articles">Articles</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="index">Dashboard</a>
-        </li>
-    </ul>
-  </div>
-</nav>
-
-<!--middle section-->       
-<div class="row">
-    <!--visualizations column-->        
-    <div class="col-12">
-        {% for article in articles %}
-            {{ titles[loop.index] }}
-            {{ article|safe }}
-        {% endfor %}
+                    </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
     </div>
-</div>
+{% endblock %}
 
-
-</body>
-
-</html>
+{% block footer %}
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+{% endblock %}
