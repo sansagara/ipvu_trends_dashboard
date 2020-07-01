@@ -1,9 +1,10 @@
 # COVID-19 Journals scraper and NLP Pipeline
-
+This project is comprised of 2 parts: A scrap/NLP pipeline and a web application to show results.
+The main motivation is to make easy to analyse scientific publications from different prestigious sources (scientific journals and websites) on a very novel topic: COVID-19
+We then can show results on a website so any user can browse through results and find articles using keywords and other properties.
 ## 1 - Scrap and NLP Pipeline
-
-Te first part of the project is an ETL/Scrap pipeline built using [Kedro](https://github.com/quantumblacklabs/kedro)
-It scraps covid-19 related Scientifica papers and publications from different EMEA and worldwide sources/Journals, like:
+The first part of the project is an ETL/Scrap pipeline built using [Kedro](https://github.com/quantumblacklabs/kedro), a python tool for creating simple pipelines.
+It scraps covid-19 related Scientific papers and publications from different EMEA and worldwide sources/Journals, like:
 
 - Lancet
 - EMA
@@ -16,7 +17,7 @@ It scraps covid-19 related Scientifica papers and publications from different EM
 The pipeline has different nodes that:
 1. Scraps websites using Beautifulsoup or API calls.
 2. Creates Pandas Dataframes with article details.
-3. Runs several NLP processes (Tokenization, Lemmatization, Sentiment, etc) 
+3. Runs several NLP processes (Tokenization, Lemmatization, Sentiment, etc) .
 4. Stores results in a SQLite DB to be used by the flask app on the dashboard website.
 
 ### Prerequisites
@@ -39,11 +40,11 @@ To get an idea of the structure of the dataset that's created on the pipeline, y
 The SQLite DB that's used on the Flask visualizer is here:
 [articles.db](https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/data/db/articles.db)
 
-### Scrap code
+### Scrap node code
 Scrap details can be seen on the scrap nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/scrap/nodes.py
 
-### NLP Process code
+### NLP Process node code
 NLP processing can be seen on the process nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/process/nodes.py
 
@@ -67,6 +68,7 @@ Open a terminal, and go into the directory with the flask app files.
 Run `python visualize/myapp.py` in the terminal.
 
 ### Video Demo
+Be sure to see my demo video on YouTube!
 [Video Walkthrough](https://youtu.be/VzAYcjGuKsE)
 
 ### Deployed App
