@@ -43,10 +43,15 @@ The SQLite DB that's used on the Flask visualizer is here:
 ### Scrap node code
 Scrap details can be seen on the scrap nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/scrap/nodes.py
+Some nodes are scraped using `beautifulsoup`, while others like elsevier are accessed through a REST API.
 
 ### NLP Process node code
 NLP processing can be seen on the process nodes here:
 https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/src/ipvu_scrapper/process/nodes.py
+
+### Keywords
+Keywords, Stopwords and Stems for this project are all listed on the parameters file:
+[Parameters.yml](https://github.com/sansagara/ipvu_trends_dashboard/blob/master/scrap/conf/base/parameters.yml)
 
 
 ## 2 - Flask Dashboard Application
@@ -74,3 +79,44 @@ Be sure to see my demo video on YouTube!
 ### Deployed App
 The flask application portion is deployed on Heroku for easy demoing purposes:
 [App on Heroku](https://ipvu-dashboard.herokuapp.com/)
+
+
+## Results
+Results can be seen directly on the [App on Heroku](https://ipvu-dashboard.herokuapp.com/) or on the 
+[Video Walkthrough](https://youtu.be/VzAYcjGuKsE).
+Following is a reflection on how the results can be checked on the dashboard itself
+
+### Visualizations 
+As a mean to validate/see the results, several visualizations and charts are provided. Here's some explanation:
+
+- An Histogram that shows the evolution of the different keywords. We can check manually the occurrence of them on the datasets.
+![histogram](docs/histogram.png)
+
+- An LDA Topic model is retrained every time to detect topics on all articles scraped
+![topics](docs/topics.png)
+
+- A wordcloud visualizes the top words occuring in the title and abstract of the article, whereby words which are more present are larger.
+![wordcloud](docs/wordcloud.png)
+
+- A violin/boxplot chart of all article abstract available. A violin plot shows the distribution of article sentiments, while a boxplot visualizes how the quartiles and average are distributed. In gold, the current article's sentiment is visualized relative to all other articles. The extent to which an article abstract is positive, negative or neutral is determined by the words used (e.g. great vs. good) and punctuation (e.g. !). 
+![violin](docs/violin.png)
+
+### LDA Model Code
+LDA training with Gensim is done each time a request is made. The code can be seen on:
+[LDA code](https://github.com/sansagara/ipvu_trends_dashboard/blob/master/visualize/controllers/topic_model.py)
+
+### Conclusion
+A case was made with a project that allows for simple, efficient exploration of the environment related to the topics of Covid-19 in the Pharma and Health landscape.
+The results can then suggest publications for manual review to a team interested on a certain topic, sentiment or keyword.
+
+
+### Future Improvements
+- Scrap additional journals/sources.
+- Use the content field with a pre-trained BERT model to recognize topics linked to the universe of interest.
+- Train a ML model for Sentiment Analysis and Topic Detection that can learn and adapt whenever new batches of data.
+- Customize the topics for Topic Analysis according to some business or research rules.
+- Apply `A/B testing between Sources to check for bias or trends.
+
+
+### Overall Solution Diagram
+![Diagram](docs/ScrapDiagram.png)
